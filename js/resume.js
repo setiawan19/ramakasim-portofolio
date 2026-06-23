@@ -119,23 +119,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
   revealElements.forEach(elem => revealObserver.observe(elem));
 
-  // --- Vanta 3D NET (Topography) Animation ---
-  if (typeof VANTA !== 'undefined' && document.getElementById('about')) {
-    VANTA.NET({
-      el: "#about",
-      mouseControls: true,
-      touchControls: true,
-      gyroControls: false,
-      minHeight: 200.00,
-      minWidth: 200.00,
-      scale: 1.00,
-      scaleMobile: 1.00,
-      color: 0x14b8a6,      // Emerald/Cyan
-      backgroundColor: 0x070a13, // Deep Charcoal/Black
-      points: 12.00,
-      maxDistance: 22.00,
-      spacing: 18.00,
-      showDots: true
-    });
-  }
 });
