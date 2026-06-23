@@ -2,14 +2,13 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Theme Toggle Control ---
   const themeToggleBtn = document.getElementById('theme-toggle');
   
-  // Get active theme from localStorage or default to system preference (preferring dark mode)
+  // Get active theme from localStorage or default to light (earth tones)
   const getPreferredTheme = () => {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) return savedTheme;
     
-    // System preference fallback
-    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    return systemPrefersDark ? 'dark' : 'dark'; // We default to dark theme as recommended
+    // Default to light (earth tones) mode
+    return 'light';
   };
 
   const setTheme = (theme) => {
